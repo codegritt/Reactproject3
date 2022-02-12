@@ -32,12 +32,12 @@ class App extends Component {
 
   }
 
-  deleteItem(id){
-    const list=[...this.state.list];
+  deleteItem(id) {
+    const list = [...this.state.list];
 
-    const updatedList=list.filter(item=>item.id!==id);
+    const updatedList = list.filter(item => item.id !== id);
 
-    this.setState({list: updatedList});
+    this.setState({ list: updatedList });
   }
 
   render() {
@@ -47,7 +47,7 @@ class App extends Component {
         <br />
         <input type="text" placeholder="type new item here..." value={this.state.newItem}
           onChange={e => this.updateInput("newItem", e.target.value)} />
-&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={() => this.addItem()}> Add</button>
 
         <br />
